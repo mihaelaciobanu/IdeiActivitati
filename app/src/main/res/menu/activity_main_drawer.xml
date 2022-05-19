@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_lista_activitati"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/lista_activitati" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
@@ -21,5 +21,15 @@
             android:id="@+id/nav_formular"
             android:icon="@drawable/ic_launcher_background"
             android:title="@string/formular" />
+
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_maps" />
+
+        <item
+            android:id="@+id/nav_activitate_noua"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/activitate_noua" />
     </group>
 </menu>
