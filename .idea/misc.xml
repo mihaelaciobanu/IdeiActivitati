@@ -3,18 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/activitati_widget.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/activity_maps.xml" value="0.6785714285714286" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/activity_maps2.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/element_activitate.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/element_widget.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/fragment_maps.xml" value="0.15307971014492755" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/layout/nav_header_main.xml" value="0.15307971014492755" />
         <entry key="..\:/Users/Mihaela/Desktop/proiecteAndroid/IdeiActivitatiKotlin/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/teodora/AndroidStudioProjects/IdeiActivitati/app/src/main/res/layout/content_main.xml" value="0.1" />
-        <entry key="..\:/Users/teodora/AndroidStudioProjects/IdeiActivitati/app/src/main/res/layout/element_activitate.xml" value="0.25" />
-        <entry key="..\:/Users/teodora/AndroidStudioProjects/IdeiActivitati/app/src/main/res/layout/fragment_lista_activitati.xml" value="0.14628623188405798" />
-        <entry key="..\:/Users/teodora/AndroidStudioProjects/IdeiActivitati/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
-        <entry key="..\:/Users/teodora/AndroidStudioProjects/IdeiActivitati/app/src/main/res/menu/main.xml" value="0.1" />
       </map>
     </option>
   </component>

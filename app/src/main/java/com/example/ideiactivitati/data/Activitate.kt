@@ -15,7 +15,7 @@ class Activitate constructor(
     var data : LocalDate,
     var locatie : LatLng,
     var detaliiSuplimentare : String? = null,
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     var id : Int = 0,
 ) : Serializable {
 }
