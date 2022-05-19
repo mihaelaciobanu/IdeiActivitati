@@ -96,7 +96,6 @@
             android:id="@+id/etDetalii"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
             android:hint="Introduceti detalii suplimentare" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +107,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="50dp"
-            android:text="Trimite"
+            android:text="Adauga"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
