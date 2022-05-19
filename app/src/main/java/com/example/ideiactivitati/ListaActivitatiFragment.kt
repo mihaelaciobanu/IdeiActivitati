@@ -34,8 +34,6 @@ class ListaActivitatiFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel
-
         viewModel.listaActivitati.observe(viewLifecycleOwner){
             var adapter = ActivitatiAdapter(it)
             binding.rvActivitati.adapter = adapter

@@ -4,9 +4,9 @@ import android.app.Application
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.*
-import com.example.ideiactivitati.Activitate
-import com.example.ideiactivitati.ActivitatiDataBase
-import com.example.ideiactivitati.ActivitatiRepository
+import com.example.ideiactivitati.data.Activitate
+import com.example.ideiactivitati.data.ActivitatiDataBase
+import com.example.ideiactivitati.data.ActivitatiRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

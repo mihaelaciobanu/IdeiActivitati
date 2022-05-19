@@ -17,8 +17,7 @@ abstract class ActivitatiDataBase : RoomDatabase() {
         fun getInstance(context: Context) : ActivitatiDataBase? {
             if(activitatiDataBase == null) {
                 activitatiDataBase = Room.databaseBuilder(context, ActivitatiDataBase::class.java, "activitati.db")
-                    .fallbackToDestructiveMigration() // se sterge baza de date cand se schimba versiunea
-                    //.allowMainThreadQueries() // temporar pentru a testa
+                    .fallbackToDestructiveMigration()
                     .build()
             }
             return activitatiDataBase!!
