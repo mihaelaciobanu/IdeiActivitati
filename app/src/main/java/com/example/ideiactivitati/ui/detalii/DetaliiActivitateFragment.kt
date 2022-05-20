@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ideiactivitati.R
 import com.example.ideiactivitati.data.Activitate
 import com.example.ideiactivitati.databinding.FragmentDetaliiActivitateBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -14,8 +13,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import java.time.LocalDate
-import java.time.ZoneId
 import java.util.*
 
 class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
@@ -50,9 +47,7 @@ class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
             it.addMarker(MarkerOptions().position(LatLng(44.442258, 26.089113)))
             it.moveCamera(CameraUpdateFactory.newLatLng(LatLng(44.442258, 26.089113)))
         }
-
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -99,9 +94,4 @@ class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
         super.onLowMemory()
         binding.map.onLowMemory()
     }
-
-
-
-
-
 }
