@@ -1,4 +1,4 @@
-package com.example.ideiactivitati
+package com.example.ideiactivitati.ui.lista
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ideiactivitati.data.Activitate
+import com.example.ideiactivitati.R
 import com.example.ideiactivitati.databinding.FragmentListaActivitatiBinding
-import com.example.ideiactivitati.modelviews.ActivitatiViewModel
+
 
 
 class ListaActivitatiFragment : Fragment() {
@@ -39,10 +40,10 @@ class ListaActivitatiFragment : Fragment() {
             binding.rvActivitati.adapter = adapter
             adapter.setOnClickListener(object : ActivitatiAdapter.onItemClickListener {
                 override fun onItemClick(position: Int) {
-                    val navController = requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+                    //val navController = requireActivity().findNavController(R.id.nav_host_fragment_content_main)
                     val bundle = Bundle()
                     bundle.putSerializable("activitate", it[position])
-                    //navController.navigate(R.id.DetaliiActivitateFragment, bundle)
+                    requireActivity().findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.nav_detalii, bundle)
                 }
             })
         }

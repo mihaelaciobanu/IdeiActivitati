@@ -33,10 +33,8 @@ class FormularFragment : Fragment() {
 
         _binding = FragmentFormularBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-
-
-        return root  }
+        return root
+    }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,8 +47,6 @@ class FormularFragment : Fragment() {
                 Toast.makeText(context,it.descriere + it.id.toString(),Toast.LENGTH_LONG).show()
             }
         }
-
-        viewModel.listaActivitati
 
         binding.btnformular.setOnClickListener{
             if( binding.etDescriere.text !=null &&

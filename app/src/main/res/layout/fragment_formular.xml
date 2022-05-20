@@ -110,5 +110,4 @@
             android:text="Adauga"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

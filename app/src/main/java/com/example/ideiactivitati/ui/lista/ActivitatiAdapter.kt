@@ -1,10 +1,11 @@
-package com.example.ideiactivitati
+package com.example.ideiactivitati.ui.lista
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ideiactivitati.R
 import com.example.ideiactivitati.data.Activitate
 
 class ActivitatiAdapter(val listaActivitati:List<Activitate>) : RecyclerView.Adapter<ActivitatiAdapter.ViewHolder>() {

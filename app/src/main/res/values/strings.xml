@@ -34,4 +34,9 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
+    <string name="denumire_activitate">Descriere:</string>
+    <string name="tip">Tipul activitatii:</string>
+    <string name="data">Data:</string>
+    <string name="locatia">Locatia</string>
+    <string name="detalii">Detalii activitate</string>
 </resources>

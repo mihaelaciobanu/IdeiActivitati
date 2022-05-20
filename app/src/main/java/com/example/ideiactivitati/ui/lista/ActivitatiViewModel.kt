@@ -1,4 +1,4 @@
-package com.example.ideiactivitati.modelviews
+package com.example.ideiactivitati.ui.lista
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
