@@ -10,6 +10,7 @@ import com.example.ideiactivitati.data.ActivitatiFC
 class ActivitatiWidgetAdapter(private val application: Application) : RemoteViewsService.RemoteViewsFactory {
 
     private var cursor : Cursor? =null
+    private var furnizorContinut = ActivitatiFC()
 
     override fun onCreate() {
 

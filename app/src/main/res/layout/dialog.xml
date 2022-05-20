@@ -17,23 +17,17 @@
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/locatie_inreg"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/tvBody"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:padding="10dp"
             android:text="@string/locatie_inreg"
             android:textColor="@color/black" />
 
         <Button
             android:id="@+id/btn_yes"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
             android:background="@android:color/white"
             android:clickable="true"
+            android:padding="5dp"
             android:text="OK"
             android:textColor="#5DBCD2"
             android:textStyle="bold" />

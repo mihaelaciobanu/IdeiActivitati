@@ -111,7 +111,7 @@ class FormularFragment : Fragment() {
                     binding.etCost.text != null &&
                     binding.etParticipanti.text != null
                 ) {
-                    val date: LocalDate = LocalDate.of(
+                    var date: LocalDate = LocalDate.of(
                         binding.datepicker.year,
                         binding.datepicker.month + 1,
                         binding.datepicker.dayOfMonth
@@ -127,7 +127,7 @@ class FormularFragment : Fragment() {
                     )
                     viewModel.adaugaActivitate()
                 } else {
-                    Toast.makeText(context, "Completeaza campurile", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Completati corespunzator", Toast.LENGTH_LONG).show()
                 }
             } else {
                 Toast.makeText(context, "Nu exista permisiuni pt locatie ", Toast.LENGTH_LONG).show()
@@ -153,9 +153,5 @@ class FormularFragment : Fragment() {
                 ContextCompat.startForegroundService(requireContext(), intent)
             }
         }
-    }
-
-    private fun showDialog(title: String) {
-
     }
 }

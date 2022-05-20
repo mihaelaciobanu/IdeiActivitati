@@ -52,9 +52,8 @@ class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
 
     override fun onDestroyView() {
         super.onDestroyView()
-
+        binding.map.onDestroy()
         _binding = null
-
     }
 
     override fun onMapReady(p0: GoogleMap) {
@@ -83,7 +82,6 @@ class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
 
     override fun onDestroy() {
         super.onDestroy()
-        binding.map.onDestroy()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
