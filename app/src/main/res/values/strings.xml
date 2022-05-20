@@ -12,6 +12,14 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="formular">Formular</string>
 
+    <string-array name="Activities">
+        <item>commercial</item>
+        <item>catering</item>
+        <item>education</item>
+        <item>entertainment</item>
+        <item>tourism</item>
+    </string-array>
+
     <string-array name="Types">
         <item>education</item>
         <item>recreational</item>
@@ -27,7 +35,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps2">MapsActivity2</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="menu_maps">Maps</string>
+    <string name="menu_maps">Caută locație</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="lista_activitati">Lista Activitati</string>
     <string name="activitate_noua">Activitate Noua</string>

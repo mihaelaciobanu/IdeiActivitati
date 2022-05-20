@@ -23,7 +23,7 @@
             android:title="@string/formular" />
 
         <item
-            android:id="@+id/nav_maps"
+            android:id="@+id/nav_filtre"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_maps" />
 

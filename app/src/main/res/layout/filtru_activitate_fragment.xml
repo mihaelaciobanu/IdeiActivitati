@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".ui.maps.FiltruActivitateFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="50dp"
+        android:text="Găsește o activitate în apropiere!"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Categorie Activitate" />
+
+    <Spinner
+        android:id="@+id/spinnerActivities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/Activities" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Distanta in metri" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerMetri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_cauta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Caută locație" />
+
+</LinearLayout>

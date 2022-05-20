@@ -1,36 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_margin="10dp">
+    android:layout_margin="20dp"
+    tools:context=".ui.maps.MapsFragment">
 
-    <TextView
-        android:text="Tip activitate"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_activitate"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Activitate găsită!"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
-    <Button
-        android:text="Caută locație"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Locație" />
 
-<fragment
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="500dp"
-    tools:context=".MapsFragment" />
+        <TextView
+            android:id="@+id/tv_locatie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Locație" />
 
-    <Button
-        android:text="Adaugă activitatea!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data" />
+
+        <DatePicker
+            android:id="@+id/datePicker_locatie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Descriere" />
+
+        <EditText
+            android:id="@+id/et_descriere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:context=".ui.maps.MapsFragment" />
+
+        <Button
+            android:id="@+id/btn_adauga_activitate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adaugă activitatea!" />
+
+        <Button
+            android:id="@+id/btn_reincearca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Găsește altă activitate" />
+
+    </LinearLayout>
+</ScrollView>

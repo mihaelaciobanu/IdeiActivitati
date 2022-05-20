@@ -16,13 +16,11 @@ import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.example.ideiactivitati.R
 import com.example.ideiactivitati.data.Activitate
 import com.example.ideiactivitati.databinding.FragmentFormularBinding
 import com.google.android.gms.maps.model.LatLng
 import java.time.LocalDate
-import java.util.concurrent.TimeUnit
 
 class FormularFragment : Fragment() {
 
@@ -113,7 +111,7 @@ class FormularFragment : Fragment() {
                     binding.etCost.text != null &&
                     binding.etParticipanti.text != null
                 ) {
-                    var date: LocalDate = LocalDate.of(
+                    val date: LocalDate = LocalDate.of(
                         binding.datepicker.year,
                         binding.datepicker.month + 1,
                         binding.datepicker.dayOfMonth
@@ -129,7 +127,7 @@ class FormularFragment : Fragment() {
                     )
                     viewModel.adaugaActivitate()
                 } else {
-                    Toast.makeText(context, "caca", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Completeaza campurile", Toast.LENGTH_LONG).show()
                 }
             } else {
                 Toast.makeText(context, "Nu exista permisiuni pt locatie ", Toast.LENGTH_LONG).show()

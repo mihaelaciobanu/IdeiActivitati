@@ -32,8 +32,14 @@
         tools:layout="@layout/fragment_formular"/>
 
     <fragment
+        android:id="@+id/nav_filtre"
+        android:name="com.example.ideiactivitati.ui.maps.FiltruActivitateFragment"
+        android:label="Caută locație"
+        tools:layout="@layout/filtru_activitate_fragment"/>
+
+    <fragment
         android:id="@+id/nav_maps"
-        android:name="com.example.ideiactivitati.MapsFragment"
+        android:name="com.example.ideiactivitati.ui.maps.MapsFragment"
         android:label="Maps"
         tools:layout="@layout/fragment_maps"/>
 
