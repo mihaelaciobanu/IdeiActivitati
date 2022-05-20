@@ -39,4 +39,5 @@
     <string name="data">Data:</string>
     <string name="locatia">Locatia</string>
     <string name="detalii">Detalii activitate</string>
+    <string name="locatie_inreg">Se preia locatia</string>
 </resources>

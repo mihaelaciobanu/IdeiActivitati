@@ -33,6 +33,7 @@
         <service
             android:name=".widget.ActivitatiWidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name=".ui.formular.LocalizareService" />
 
         <activity
             android:name=".FormularActivity"

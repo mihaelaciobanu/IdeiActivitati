@@ -45,7 +45,8 @@ class DetaliiActivitateFragment : Fragment(), OnMapReadyCallback{
         binding.map.onCreate(savedInstanceState)
         binding.map.getMapAsync {
             it.addMarker(MarkerOptions().position(LatLng(44.442258, 26.089113)))
-            it.moveCamera(CameraUpdateFactory.newLatLng(LatLng(44.442258, 26.089113)))
+            //it.moveCamera(CameraUpdateFactory.newLatLng(LatLng(44.442258, 26.089113)))
+            it.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(44.442258, 26.089113), 10f))
         }
     }
 
