@@ -41,5 +41,9 @@
         android:id="@+id/nav_detalii"
         android:name="com.example.ideiactivitati.ui.detalii.DetaliiActivitateFragment"
         android:label="@string/detalii"
-        tools:layout="@layout/fragment_detalii_activitate"/>
+        tools:layout="@layout/fragment_detalii_activitate">
+        <action
+            android:id="@+id/action_nav_detalii_to_nav_lista_activitati"
+            app:destination="@id/nav_lista_activitati" />
+    </fragment>
 </navigation>
