@@ -60,7 +60,7 @@ class MapsFragment() : Fragment() {
 
         val places = JSONArray(placesString)
 
-        if (places[0] != null) {
+        if (places.length() != 0 && places[0] != null) {
             val place = places[0] as JSONObject
 
             if (place.has("properties")) {
@@ -79,6 +79,9 @@ class MapsFragment() : Fragment() {
                     binding.tvLocatie.text = properties["name"].toString()
                 }
             }
+        }
+        else{
+            Toast.makeText(view.context,"Eroare", Toast.LENGTH_SHORT).show()
         }
 
         mapFragment?.getMapAsync(callback)
@@ -99,12 +102,13 @@ class MapsFragment() : Fragment() {
                     descriere, tip, 1, 0.0, data, locatie
                 )
                 viewModel.adaugaActivitate()
-                Toast.makeText(view.context,"Activitate adaugata!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context, "Activitate adaugata!", Toast.LENGTH_SHORT).show()
             }
         }
 
         binding.btnReincearca.setOnClickListener {
-            val navController = requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+            val navController =
+                requireActivity().findNavController(R.id.nav_host_fragment_content_main)
             navController.navigate(R.id.nav_filtre)
         }
     }
