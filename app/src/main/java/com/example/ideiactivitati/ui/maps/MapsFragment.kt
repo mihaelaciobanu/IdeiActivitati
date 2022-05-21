@@ -40,10 +40,6 @@ class MapsFragment() : Fragment() {
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(locatie))
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -77,18 +73,19 @@ class MapsFragment() : Fragment() {
 
                 if (properties.has("name")) {
                     binding.tvLocatie.text = properties["name"].toString()
+                } else if (properties.has("street")) {
+                    binding.tvLocatie.text = properties["street"].toString()
                 }
             }
-        }
-        else{
-            Toast.makeText(view.context,"Eroare", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(context, "Eroare", Toast.LENGTH_SHORT).show()
         }
 
         mapFragment?.getMapAsync(callback)
 
         binding.btnAdaugaActivitate.setOnClickListener {
             if (binding.etDescriere.text.toString().isEmpty()) {
-                Toast.makeText(view.context, "Completează descrierea!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Completează descrierea!", Toast.LENGTH_SHORT).show()
             } else {
                 val descriere = binding.etDescriere.text.toString()
                 val data: LocalDate = LocalDate.of(
@@ -102,13 +99,17 @@ class MapsFragment() : Fragment() {
                     descriere, tip, 1, 0.0, data, locatie
                 )
                 viewModel.adaugaActivitate()
-                Toast.makeText(view.context, "Activitate adaugata!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Activitate adaugata!", Toast.LENGTH_SHORT).show()
+                val navController =
+                    requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+                navController.navigate(R.id.nav_lista_activitati)
             }
         }
 
         binding.btnReincearca.setOnClickListener {
             val navController =
                 requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+
             navController.navigate(R.id.nav_filtre)
         }
     }

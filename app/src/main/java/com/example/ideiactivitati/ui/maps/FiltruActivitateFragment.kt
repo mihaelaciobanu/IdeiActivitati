@@ -7,17 +7,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.example.ideiactivitati.BuildConfig.GOOGLE_MAPS_API_KEY
 import com.example.ideiactivitati.R
 import com.example.ideiactivitati.databinding.FiltruActivitateFragmentBinding
 import com.example.ideiactivitati.ui.formular.LocalizareService
-import com.google.android.gms.location.FusedLocationProviderClient
 import org.json.JSONArray
 import org.json.JSONObject
 import java.net.URL
 
 class FiltruActivitateFragment : Fragment() {
-
     private var _binding: FiltruActivitateFragmentBinding? = null
 
     private val binding get() = _binding!!
@@ -36,7 +33,6 @@ class FiltruActivitateFragment : Fragment() {
         binding.numberPickerMetri.minValue = 0
         binding.numberPickerMetri.maxValue = 5000
 
-
         val apiKey = "11d9c807237c42f6996217f4a06c5eb6"
         val category = binding.spinnerActivities.selectedItem
 
@@ -53,14 +49,14 @@ class FiltruActivitateFragment : Fragment() {
         }
 
         val geoApifyUrl =
-            "https://api.geoapify.com/v2/places?categories=${category}&bias=proximity:${lat},${lng}&lang=en&limit=1&apiKey=${apiKey}"
+            "https://api.geoapify.com/v2/places?categories=${category}&lang=en&limit=10&apiKey=${apiKey}"
 
         binding.btnCauta.setOnClickListener {
             val metri = binding.numberPickerMetri.value
             if (binding.numberPickerMetri.value > 0) {
-                searchPlaces("${geoApifyUrl}&filter=circle:${lat},${lng},${metri}")
+                searchPlaces("${geoApifyUrl}&filter=circle:${lng},${lat},${metri}")
             } else {
-                searchPlaces(geoApifyUrl)
+                searchPlaces("${geoApifyUrl}&filter=circle:${lng},${lat},5000")
             }
         }
     }
@@ -76,7 +72,7 @@ class FiltruActivitateFragment : Fragment() {
                 jsonObject = JSONObject(content)
 
                 if (jsonObject.has("error")) {
-                    Toast.makeText(view?.context, "Eroare! Reîncercați!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Eroare! Reîncercați!", Toast.LENGTH_SHORT).show()
                 } else if (jsonObject.has("features") && (jsonObject["features"] as JSONArray).length() > 0) {
                     val places = jsonObject["features"]
 
@@ -87,9 +83,13 @@ class FiltruActivitateFragment : Fragment() {
                     bundle.putString("places", places.toString())
                     bundle.putString("tip", binding.spinnerActivities.selectedItem.toString())
                     navController.navigate(R.id.nav_maps, bundle)
-                }
-                else{
-                    Toast.makeText(view?.context, "Reîncercați schimbarea parametrilor!", Toast.LENGTH_SHORT).show()
+
+                } else {
+                    Toast.makeText(
+                        context,
+                        "Reîncercați schimbarea parametrilor!",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
