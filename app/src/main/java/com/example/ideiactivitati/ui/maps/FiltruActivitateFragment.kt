@@ -63,6 +63,8 @@ class FiltruActivitateFragment : Fragment() {
 
     fun searchPlaces(stringUrl: String) {
 
+
+
         val thread = Thread {
             try {
                 val content = URL(stringUrl).readText()
@@ -72,24 +74,35 @@ class FiltruActivitateFragment : Fragment() {
                 jsonObject = JSONObject(content)
 
                 if (jsonObject.has("error")) {
+                    requireActivity().runOnUiThread(Runnable {
+                        Toast.makeText(context, "Eroare! Reîncercați!", Toast.LENGTH_SHORT).show()
+                    }
+                    )
                     Toast.makeText(context, "Eroare! Reîncercați!", Toast.LENGTH_SHORT).show()
                 } else if (jsonObject.has("features") && (jsonObject["features"] as JSONArray).length() > 0) {
                     val places = jsonObject["features"]
 
-                    val navController =
-                        requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+                    requireActivity().runOnUiThread(Runnable {
+                        val navController =
+                            requireActivity().findNavController(R.id.nav_host_fragment_content_main)
+                        val bundle = Bundle()
+                        bundle.putString("places", places.toString())
+                        bundle.putString("tip", binding.spinnerActivities.selectedItem.toString())
+                        navController.navigate(R.id.nav_maps, bundle)
 
-                    val bundle = Bundle()
-                    bundle.putString("places", places.toString())
-                    bundle.putString("tip", binding.spinnerActivities.selectedItem.toString())
-                    navController.navigate(R.id.nav_maps, bundle)
-
+                    }
+                    )
                 } else {
-                    Toast.makeText(
-                        context,
-                        "Reîncercați schimbarea parametrilor!",
-                        Toast.LENGTH_SHORT
-                    ).show()
+
+                    requireActivity().runOnUiThread(Runnable {
+                        Toast.makeText(
+                            context,
+                            "Reîncercați schimbarea parametrilor!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    )
+
                 }
             } catch (e: Exception) {
                 e.printStackTrace()

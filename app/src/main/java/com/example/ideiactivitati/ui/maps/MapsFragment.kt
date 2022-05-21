@@ -102,7 +102,7 @@ class MapsFragment() : Fragment() {
                 Toast.makeText(context, "Activitate adaugata!", Toast.LENGTH_SHORT).show()
                 val navController =
                     requireActivity().findNavController(R.id.nav_host_fragment_content_main)
-                navController.navigate(R.id.nav_lista_activitati)
+                navController.navigate(R.id.nav_home)
             }
         }
 
@@ -110,7 +110,7 @@ class MapsFragment() : Fragment() {
             val navController =
                 requireActivity().findNavController(R.id.nav_host_fragment_content_main)
 
-            navController.navigate(R.id.nav_filtre)
+            navController.popBackStack(R.id.nav_filtre, false)
         }
     }
 

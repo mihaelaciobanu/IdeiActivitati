@@ -76,7 +76,7 @@ class FormularFragment : Fragment() {
 
         viewModel.listaActivitati.observe(viewLifecycleOwner) {
             it.forEach {
-                Toast.makeText(context,it.descriere + it.id.toString(),Toast.LENGTH_LONG).show()
+                //Toast.makeText(context,it.descriere + it.id.toString(),Toast.LENGTH_LONG).show()
             }
         }
 
