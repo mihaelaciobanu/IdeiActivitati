@@ -12,10 +12,6 @@
             android:id="@+id/nav_lista_activitati"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/lista_activitati" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
 
         <item
             android:id="@+id/nav_formular"
