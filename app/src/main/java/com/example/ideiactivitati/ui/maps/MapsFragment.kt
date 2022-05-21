@@ -20,6 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDate
+import kotlin.random.Random
 
 class MapsFragment() : Fragment() {
 
@@ -56,26 +57,32 @@ class MapsFragment() : Fragment() {
 
         val places = JSONArray(placesString)
 
-        if (places.length() != 0 && places[0] != null) {
-            val place = places[0] as JSONObject
+        if (places.length() != 0) {
 
-            if (place.has("properties")) {
+            val index = (0..places.length()).shuffled().last()
+            if (places[index] != null) {
+                val place = places[index] as JSONObject
 
-                val properties = place["properties"] as JSONObject
+                if (place.has("properties")) {
+                    val properties = place["properties"] as JSONObject
 
-                if (properties.has("lat")) {
-                    lat = properties["lat"] as Double
+                    if (properties.has("lat")) {
+                        lat = properties["lat"] as Double
+                    }
+
+                    if (properties.has("lon")) {
+                        lng = properties["lon"] as Double
+                    }
+
+                    if (properties.has("name")) {
+                        binding.tvLocatie.text = properties["name"].toString()
+                    } else if (properties.has("street")) {
+                        binding.tvLocatie.text = properties["street"].toString()
+                    }
                 }
-
-                if (properties.has("lon")) {
-                    lng = properties["lon"] as Double
-                }
-
-                if (properties.has("name")) {
-                    binding.tvLocatie.text = properties["name"].toString()
-                } else if (properties.has("street")) {
-                    binding.tvLocatie.text = properties["street"].toString()
-                }
+            }
+            else{
+                Toast.makeText(context, "Eroare", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(context, "Eroare", Toast.LENGTH_SHORT).show()

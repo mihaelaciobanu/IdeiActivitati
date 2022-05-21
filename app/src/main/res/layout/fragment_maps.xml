@@ -16,8 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="Activitate găsită!"
+            android:textStyle="bold|italic"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -28,8 +29,9 @@
             android:id="@+id/tv_locatie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="Locație" />
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -51,6 +53,7 @@
 
         <EditText
             android:id="@+id/et_descriere"
+            android:textStyle="bold|italic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
