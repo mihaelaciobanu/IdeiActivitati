@@ -39,6 +39,21 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_grafic"
+        android:name="com.example.ideiactivitati.ui.grafic.GraficFragment"
+        android:label="Grafic"
+        tools:layout="@layout/fragment_grafic">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_despre"
+        android:name="com.example.ideiactivitati.ui.gallery.DespreFragment"
+        android:label="Despre"
+        tools:layout="@layout/fragment_despre">
+    </fragment>
+
+
+    <fragment
         android:id="@+id/nav_detalii"
         android:name="com.example.ideiactivitati.ui.detalii.DetaliiActivitateFragment"
         android:label="@string/detalii"

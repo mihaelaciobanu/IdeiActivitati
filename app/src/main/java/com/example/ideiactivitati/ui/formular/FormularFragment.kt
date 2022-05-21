@@ -38,7 +38,6 @@ class FormularFragment : Fragment() {
     var coordonate = LatLng(44.439663, 26.096306)
 
     private val receptorCoordonate = object : BroadcastReceiver() {
-
         override fun onReceive(p0: Context?, p1: Intent?) {
             coordonate = p1?.getParcelableExtra<LatLng>("locatie")!!
         }
@@ -117,15 +116,22 @@ class FormularFragment : Fragment() {
                         binding.datepicker.dayOfMonth
                     )
 
-                    viewModel.activitate = Activitate(
-                        binding.etDescriere.text.toString()!!,
-                        binding.spinner.selectedItem.toString()!!,
-                        binding.etParticipanti.text.toString().toInt()!!,
-                        binding.etCost.text.toString().toDouble()!!, date!!,
-                        coordonate,
-                        binding.etDetalii.text.toString()!!
-                    )
-                    viewModel.adaugaActivitate()
+                    try{
+                        viewModel.activitate = Activitate(
+                            binding.etDescriere.text.toString()!!,
+                            binding.spinner.selectedItem.toString()!!,
+                            binding.etParticipanti.text.toString().toInt()!!,
+                            binding.etCost.text.toString().toDouble()!!, date!!,
+                            coordonate,
+                            binding.etDetalii.text.toString()!!
+                        )
+
+                        viewModel.adaugaActivitate()
+                        Toast.makeText(context, "Activitate adaugata", Toast.LENGTH_LONG).show()
+
+                    } catch(e: Exception){
+                        Toast.makeText(context, "Completati corespunzator", Toast.LENGTH_LONG).show()
+                    }
                 } else {
                     Toast.makeText(context, "Completati corespunzator", Toast.LENGTH_LONG).show()
                 }

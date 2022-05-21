@@ -1,15 +1,17 @@
-package com.example.ideiactivitati.ui.home
+package com.example.ideiactivitati.ui.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.ideiactivitati.databinding.FragmentHomeBinding
+import androidx.lifecycle.ViewModelProvider
+import com.example.ideiactivitati.databinding.FragmentDespreBinding
 
-class HomeFragment : Fragment() {
+class DespreFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentDespreBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -20,16 +22,11 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        val homeViewModel =
-//            ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentDespreBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+
         return root
     }
 

@@ -6,8 +6,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/acasa" />
+
         <item
             android:id="@+id/nav_lista_activitati"
             android:icon="@drawable/ic_menu_gallery"
@@ -15,13 +16,30 @@
 
         <item
             android:id="@+id/nav_formular"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic_baseline_form_alt_24"
             android:title="@string/formular" />
+
+
+
+        <item
+            android:id="@+id/nav_grafic"
+            android:icon="@drawable/ic_baseline_show_chart_24"
+            android:title="@string/grafic" />
+
+
 
         <item
             android:id="@+id/nav_filtre"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_baseline_map_24"
             android:title="@string/menu_maps" />
+
+        <item
+            android:id="@+id/nav_despre"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/despre" />
+
+
+
 
     </group>
 </menu>

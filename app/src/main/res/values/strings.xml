@@ -46,4 +46,9 @@
     <string name="locatia">Locatia</string>
     <string name="detalii">Detalii activitate</string>
     <string name="locatie_inreg">Se preia locatia</string>
+    <string name="grafic">grafic</string>
+    <string name="bine_ati_venit">Bine ati venit!</string>
+    <string name="idei_activitati">Idei activitati</string>
+    <string name="despre">Despre</string>
+    <string name="acasa">Acasa</string>
 </resources>
