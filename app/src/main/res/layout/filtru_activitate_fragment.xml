@@ -30,13 +30,24 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
+        android:text="Locația curentă" />
+
+    <TextView
+        android:id="@+id/locatieCurenta"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
         android:text="Distanta in metri" />
 
     <NumberPicker
         android:id="@+id/numberPickerMetri"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_cauta"

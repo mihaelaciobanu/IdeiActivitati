@@ -38,7 +38,6 @@ class FormularFragment : Fragment() {
     var coordonate = LatLng(44.439663, 26.096306)
 
     private val receptorCoordonate = object : BroadcastReceiver() {
-
         override fun onReceive(p0: Context?, p1: Intent?) {
             coordonate = p1?.getParcelableExtra<LatLng>("locatie")!!
         }

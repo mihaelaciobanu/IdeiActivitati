@@ -20,6 +20,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDate
+import kotlin.random.Random
 
 class MapsFragment() : Fragment() {
 
@@ -56,8 +57,11 @@ class MapsFragment() : Fragment() {
 
         val places = JSONArray(placesString)
 
-        if (places.length() != 0 && places[0] != null) {
-            val place = places[0] as JSONObject
+        val index = (0..9).shuffled().last()
+
+        if (places.length() != 0 && places[index] != null) {
+
+            val place = places[index] as JSONObject
 
             if (place.has("properties")) {
 
